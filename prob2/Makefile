@@ -1,7 +1,7 @@
-NAME = a.out
+NAME = a.exe
 CC = g++
 CFLAGS = 
-SRCS = IIHK.cpp
+SRCS = main.cpp Sims.cpp student.cpp
 OBJS = $(patsubst %.cpp, %.o, $(SRCS))
 
 all: $(NAME)
