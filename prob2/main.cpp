@@ -52,7 +52,6 @@ int main (int ac, char** av)
 				cin >> s;
 				cin.ignore();
 				sims.search(s);
-				cout << endl;
 			}
 			else if (mode == 3)
 			{
@@ -61,7 +60,6 @@ int main (int ac, char** av)
 				cin >> s;
 				cin.ignore();
 				sims.sorting(s);
-				cout << endl;
 			}
 			else if (mode == 4)
 			{
@@ -72,6 +70,7 @@ int main (int ac, char** av)
 				cout << "wrong input" << endl;
 				continue;
 			}
+			cout << endl;
 		}
 	}
 	else

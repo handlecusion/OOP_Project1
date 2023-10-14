@@ -21,6 +21,7 @@ class	Sims
 	vector<Student>		student;
 	int					num;
 	string				str;
+	int					smode;
 
 public:
 	Sims(string str);
@@ -30,7 +31,11 @@ public:
 	void	print_stu(int index);
 	void	insert(Sims s);
 	void	sorting(int s);
-
+	string	checkName(string name);
+	string	checkId(string id);
+	string	checkBirthyear(string year);
+	string	checkDepartment(string dep);
+	string	checkTel(string tel);
 };
 
 bool	cmpName(Student s1, Student s2);

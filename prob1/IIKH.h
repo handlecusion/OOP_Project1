@@ -4,7 +4,7 @@
 class Iikh
 {
 public:
-	Iikh iikh();
+	Iikh();
 	void run();
 	void exit();
 };
@@ -17,7 +17,7 @@ class Recipe
 	string	comment;
 
 public:
-	Recipe recipe(string needs, int time, string* proc);
+	Recipe(string needs, int time, string* proc);
 	void	setNeeds(string n);
 	void	setTime(int t);
 	void	setProc(string *proc);
