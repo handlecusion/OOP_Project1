@@ -10,23 +10,24 @@ using namespace std;
 class	Student
 {
 	string	name;
-	int		id;
-	int		birthyear;
+	string	id;
+	string	birthyear;
 	string	department;
-	int		tel;
+	string	tel;
 
 public:
-	Student(string name, int id, int bir, string dep, int tel);
+	Student(string name, string id, string bir, string dep, string tel);
 	void setName (string name);
-	void setId (int id);
-	void setBirthyear (int by);
+	void setId (string id);
+	void setBirthyear (string by);
 	void setDepartment (string dep);
-	void setTel	(int tel);
+	void setTel	(string tel);
 	string	getName();
-	int		getId();
-	int		getBirthyear();
+	string	getId();
+	string	getBirthyear();
 	string	getDepartment();
-	int		getTel();
+	string	getTel();
+	int	check(int n, string str);
 };
 
 
