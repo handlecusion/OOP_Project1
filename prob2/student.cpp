@@ -91,5 +91,3 @@ int	Student::check(int n, string str)
 	}
 	return (0);
 }
-
-

@@ -5,6 +5,7 @@
 
 void	print_main();
 void	print_search();
+void	print_sort();
 
 int main (int ac, char** av)
 {
@@ -12,11 +13,12 @@ int main (int ac, char** av)
 
 	if (ac == 2)
 	{
-		Sims sims = Sims(av[1]);
+		Sims sims(av[1]);
 		while (1)
 		{
 			print_main();
 			cin >> mode;
+			cin.ignore();
 			if (mode == 1)
 			{
 				string	name;
@@ -48,12 +50,18 @@ int main (int ac, char** av)
 				int s;
 				print_search();
 				cin >> s;
+				cin.ignore();
 				sims.search(s);
 				cout << endl;
 			}
 			else if (mode == 3)
 			{
-				// sorting();
+				int	s;
+				print_sort();
+				cin >> s;
+				cin.ignore();
+				sims.sorting(s);
+				cout << endl;
 			}
 			else if (mode == 4)
 			{
@@ -84,10 +92,21 @@ void	print_main()
 
 void	print_search()
 {
+	cout << "- Search -" << endl;
 	cout << "1. Search by name" << endl;
 	cout << "2. Search by student ID (10 numbers)" << endl;
 	cout << "3. Search by admission year (4 numbers)" << endl;
 	cout << "4. Search by department name" << endl;
-	cout << "5. List All" << endl << endl;
+	cout << "5. List All" << endl;
+	cout << "> ";
+}
+
+void	print_sort()
+{
+	cout << "- Sorting -" << endl;
+	cout << "1. Sort by Name" << endl;
+	cout << "2. Sort by Student ID" << endl;
+	cout << "3. Sort by Admission Year" << endl;
+	cout << "4. Sort by Department name" << endl;
 	cout << "> ";
 }

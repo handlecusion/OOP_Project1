@@ -4,11 +4,13 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <cstring>
 #include <stdlib.h>
 #include <vector>
 #include <sstream>
 #include <cstdlib>
 #include <iomanip>
+#include <algorithm>
 #include "student.h"
 
 using namespace std;
@@ -16,9 +18,9 @@ using namespace std;
 class	Sims
 {
 	ifstream			rFile;
-	ofstream			wFile;
-	vector<Student*>	student;
+	vector<Student>		student;
 	int					num;
+	string				str;
 
 public:
 	Sims(string str);
@@ -27,6 +29,12 @@ public:
 	void	search(int s);
 	void	print_stu(int index);
 	void	insert(Sims s);
+	void	sorting(int s);
+
 };
 
+bool	cmpName(Student s1, Student s2);
+bool	cmpId(Student s1, Student s2);
+bool	cmpYear(Student s1, Student s2);
+bool	cmpDep(Student s1, Student s2);
 # endif
