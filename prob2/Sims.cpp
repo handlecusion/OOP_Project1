@@ -127,36 +127,36 @@ bool	cmpName(Student s1, Student s2)
 {
 	int	res = strcmp(s1.getName().c_str(), s2.getName().c_str());
 	if (res < 0)
-		return (1);
+		return (true);
 	else
-		return (0);
+		return (false);
 }
 
 bool	cmpId(Student s1, Student s2)
 {
 	int	res = strcmp(s1.getId().c_str(), s2.getId().c_str());
 	if (res < 0)
-		return (1);
+		return (true);
 	else
-		return (0);
+		return (false);
 }
 
 bool	cmpYear(Student s1, Student s2)
 {
 	int	res = strncmp(s1.getBirthyear().c_str(), s2.getBirthyear().c_str(), 4);
 	if (res < 0)
-		return (1);
+		return (true);
 	else
-		return (0);
+		return (false);
 }
 
 bool	cmpDep(Student s1, Student s2)
 {
 	int	res = strcmp(s1.getDepartment().c_str(), s2.getDepartment().c_str());
 	if (res < 0)
-		return (1);
+		return (true);
 	else
-		return (0);
+		return (false);
 }
 
 void	Sims::sorting(int s)
