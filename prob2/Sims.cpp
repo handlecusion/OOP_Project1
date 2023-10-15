@@ -77,7 +77,7 @@ void	Sims::add(string name, string id, string year, string dep, string tel)
 	wFile.close();
 
 	wFile.open(str, ios::app);
-	line = name + "/" + id + "/" + year + "/" + dep + "/" + tel;
+	line = name + "/" + id + "/" + year + "/" + dep + "/" + tel + "\n";
 	len = line.length();
 	wFile.write(line.c_str(), len);  
 	student.push_back(Student(name, id, year, dep, tel));
